@@ -18,3 +18,17 @@ int sumRange(int left, int right){
     
     return (left) + sumRange(left+1,right);
 }
+
+//Task C
+
+int sumArray(int *arr, int size){
+    return sumArrayInRange(arr, 0,size-1);
+}
+int sumArrayInRange(int *arr, int left, int right){
+    if(left == right){
+        return arr[left];
+    }
+    else{
+        return arr[left] + sumArrayInRange(arr,left+1,right);
+    }
+}
