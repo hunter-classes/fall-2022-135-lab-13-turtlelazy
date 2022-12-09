@@ -69,3 +69,15 @@ bool nestedParensHelper(std::string s, int count){
     }
     return nestedParensHelper(s.substr(1,s.length()-1),count);
 }
+
+//Task F
+bool divisible(int *prices, int size){
+    return divisibleHelper(prices, size, 0, 0, 0);
+}
+
+bool divisibleHelper(int *prices, int size, int left_sum, int right_sum, int index){
+    if(index == size){
+        return left_sum == right_sum;
+    }
+    return divisibleHelper(prices, size, left_sum + prices[index], right_sum, index+1) || divisibleHelper(prices, size, left_sum, right_sum + prices[index], index+1);
+}

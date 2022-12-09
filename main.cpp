@@ -22,6 +22,11 @@ int main(){
     std::cout << "isAlphanumeric(\"KLMN 8-7-6\"):" << isAlphanumeric("KLMN 8-7-6") << "\n";        // true (1)
     std::cout << "nestedParens(\"((()))\"): " << nestedParens("((()))") << "\n";
     std::cout << "nestedParens(\"(((\"): " << nestedParens("(((") << "\n";
+    int divisible_prices [] = {10, 15, 12, 18, 19, 17, 13, 35, 33};
+    std::cout << "Is the array divisible_prices divisible? " << divisible(divisible_prices,size) << "\n";
+    int notdivisible_prices [] = {1,1,1,1,1};
+    std::cout << "Is the array notdivisible_prices divisible? " << divisible(notdivisible_prices,size) << "\n";
+
 
     return 0;
 }
