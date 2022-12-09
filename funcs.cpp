@@ -41,3 +41,31 @@ bool isAlphanumeric(std::string s){
     }
     return std::isalnum(s.at(0)) && isAlphanumeric(s.substr(1,s.length()-1));
 }
+
+//Task E
+bool nestedParens(std::string s){
+    return nestedParensHelper(s,0);
+}
+
+bool nestedParensHelper(std::string s, int count){
+    if(s.length() == 1){
+        if(s.at(0) == ')'){
+            count -= 1;
+            return count == 0;
+        }
+        return false;
+    }
+
+    else{
+        if(s.at(0) == ')'){
+            count -= 1;
+        }
+        else if(s.at(0) == '('){
+            count += 1;
+        }
+        else{
+            return false;
+        }
+    }
+    return nestedParensHelper(s.substr(1,s.length()-1),count);
+}

@@ -20,7 +20,8 @@ int main(){
     std::cout << "sumArray on array arr " << sumArray(arr, size) << "\n";  // Sum is 43
     std::cout << "isAlphanumeric(\"ABCD\"):" << isAlphanumeric("ABCD") << "\n";        // true (1)
     std::cout << "isAlphanumeric(\"KLMN 8-7-6\"):" << isAlphanumeric("KLMN 8-7-6") << "\n";        // true (1)
-
+    std::cout << "nestedParens(\"((()))\"): " << nestedParens("((()))") << "\n";
+    std::cout << "nestedParens(\"(((\"): " << nestedParens("(((") << "\n";
 
     return 0;
 }
