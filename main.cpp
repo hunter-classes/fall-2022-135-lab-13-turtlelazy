@@ -17,8 +17,10 @@ int main(){
     arr[8] = 13;
     arr[9] = -21;
 
-    int sum = sumArray(arr, size); // Add all elements
-    std::cout << "Sum is " << sum << "\n";  // Sum is 43
+    std::cout << "sumArray on array arr " << sumArray(arr, size) << "\n";  // Sum is 43
+    std::cout << "isAlphanumeric(\"ABCD\"):" << isAlphanumeric("ABCD") << "\n";        // true (1)
+    std::cout << "isAlphanumeric(\"KLMN 8-7-6\"):" << isAlphanumeric("KLMN 8-7-6") << "\n";        // true (1)
+
 
     return 0;
 }

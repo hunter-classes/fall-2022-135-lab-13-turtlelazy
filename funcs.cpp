@@ -1,5 +1,6 @@
 #include "funcs.h"
 #include <string>
+#include <cctype>
 
 //Task A
 std::string printRange(int left, int right){
@@ -31,4 +32,12 @@ int sumArrayInRange(int *arr, int left, int right){
     else{
         return arr[left] + sumArrayInRange(arr,left+1,right);
     }
+}
+
+//Task D
+bool isAlphanumeric(std::string s){
+    if(s.length() == 1){
+        return std::isalnum(s.at(0));
+    }
+    return std::isalnum(s.at(0)) && isAlphanumeric(s.substr(1,s.length()-1));
 }
