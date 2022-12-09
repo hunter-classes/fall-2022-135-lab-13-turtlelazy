@@ -34,8 +34,7 @@ You must:
 
 
 * Notes
-
-
+isAlphanumeric("") will return false
 
 * Task Specific instructions
 

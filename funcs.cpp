@@ -23,6 +23,9 @@ int sumRange(int left, int right){
 //Task C
 
 int sumArray(int *arr, int size){
+    if(size == 0){
+        return 0;
+    }
     return sumArrayInRange(arr, 0,size-1);
 }
 int sumArrayInRange(int *arr, int left, int right){
@@ -36,6 +39,9 @@ int sumArrayInRange(int *arr, int left, int right){
 
 //Task D
 bool isAlphanumeric(std::string s){
+    if(s.length() == 0){
+        return false;
+    }
     if(s.length() == 1){
         return std::isalnum(s.at(0));
     }
@@ -48,6 +54,10 @@ bool nestedParens(std::string s){
 }
 
 bool nestedParensHelper(std::string s, int count){
+    if(s.length() == 0){
+        return true;
+    }
+
     if(s.length() == 1){
         if(s.at(0) == ')'){
             count -= 1;
